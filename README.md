@@ -1,21 +1,68 @@
-# ultimatetictactoe
+# Ulimate tic tac toe
 
-> A Vue.js project
+ Le but de ce cite est de créer un Ultimate tic tac toe qui peut etre
+ jouer entre deux ordinateurs.
 
-## Build Setup
+## Etapes:
+* Organiser github
+* Créer un tic tac toe normal
+* Faire qu'il puisse etre joué entre deux ordinateurs
+* si le temps nous le permet, créer un ultimate tic tac toe
 
-``` bash
-# install dependencies
-npm install
+## Règles
+1. Joueur 1 choissit dans quelle grille et case il joue
+1. La grille ou joue Joueur 2 est determiné par la case ou joue Joueur 1
+1. Si un joueur est envoyé sur une grille gagnée, le joueur a qui la
+grille apartient décide dans quel grille il faudra jouer.
 
-# serve with hot reload at localhost:8080
-npm run dev
+<p>
+__|__|__<br>
+__|__|__<br>
+ &nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |O &larr; </p>
 
-# build for production with minification
-npm run build
+      Joueur 1 joue ici
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+<p>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__        <br>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__          <br>
+ &nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; | O&nbsp;&nbsp;| &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+ &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+--------------------------------------- <br/>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__        <br>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__          <br>
+ &nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+  &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+--------------------------------------- <br/>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__        <br>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__          <br>
+ &nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+  &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+</p>
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &uarr;
+
+
+       Joueur 2 doit jouer dans ce tic tac toe
+ <p>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__        <br>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__          <br>
+ &nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; | O&nbsp;&nbsp;| &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+ &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+--------------------------------------- <br/>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__        <br>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__          <br>
+ &nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+  &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+--------------------------------------- <br/>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__        <br>
+__|__|__&nbsp;&nbsp;|&nbsp;&nbsp;__|__|__ &nbsp;&nbsp;|&nbsp;&nbsp;__|__|__          <br>
+ &nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp&nbsp;&nbsp&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+  &nbsp;X |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+</p>
+&nbsp;&nbsp;&nbsp;&nbsp; &uarr;
+
+     Joueur 1 doit jouer danc ce tic tac toe
+
+4. Ainsi de suite jusqu'a une personne gagne le grand tic tac toe
