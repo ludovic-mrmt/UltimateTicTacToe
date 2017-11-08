@@ -25,6 +25,6 @@ grille appartient décide dans quel grille il faudra jouer.
 
 ## Répartition des tâches
 
-> * Comment connecter deux ordinateurs en local : Kelan
-> * Esthétique du site : 
-> * Fonctionnement de VueJs :
+> * Comment connecter deux ordinateurs en local : **Kelan**
+> * Esthétique du site & page d'accueil : **Matteo**
+> * Fonctionnement de VueJs & page du morpion : **Ludovic**
