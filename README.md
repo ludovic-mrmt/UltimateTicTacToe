@@ -1,21 +1,30 @@
-# ultimatetictactoe
+# Ulimate tic tac toe
 
-> 
 
-## Build Setup
+ >Le but de ce cite est de créer un Ultimate tic tac toe qui peut être
+ joué entre deux ordinateurs.
 
-``` bash
-# install dependencies
-npm install
+## Etapes
+* Organiser *github*
+* Créer un tic tac toe normal
+* Faire qu'il puisse être joué entre deux ordinateurs
+* Si le temps nous le permet, créer un ultimate tic tac toe
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Règles
+1. Joueur 1 choisit dans quelle grille et case il joue
+1. La grille où joue Joueur 2 est determiné par la case où joue Joueur 1
+1. Si un joueur est envoyé sur une grille gagnée, le joueur a qui la
+grille appartient décide dans quel grille il faudra jouer.
 
-# build for production with minification
-npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+    Joueur 1 joue ici
+    Joueur 2 doit jouer dans ce tic tac toe
+    Joueur 1 doit jouer danc ce tic tac toe
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+4. Ainsi de suite jusqu'à ce qu'une personne gagne le grand tic tac toe
+
+## Répartition des tâches
+
+> * Comment connecter deux ordinateurs en local : Kelan
+> * Esthétique du site : 
+> * Fonctionnement de VueJs :
