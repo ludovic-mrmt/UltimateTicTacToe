@@ -28,3 +28,4 @@ grille appartient décide dans quel grille il faudra jouer.
 > * Comment connecter deux ordinateurs en local : **Kelan**
 > * Esthétique du site & page d'accueil : **Matteo**
 > * Fonctionnement de VueJs & page du morpion : **Ludovic**
+Heyy
