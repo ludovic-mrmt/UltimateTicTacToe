@@ -1,14 +1,14 @@
 # Ulimate tic tac toe
 
 
- >Le but de ce cite est de créer un Ultimate tic tac toe qui peut être
+ >Le but de ce site est de créer un Ultimate Tic Tac Toe qui peut être
  joué entre deux ordinateurs.
 
 ## Etapes
 * Organiser *github*
-* Créer un tic tac toe normal
+* Créer un Tic Tac Toe normal
 * Faire qu'il puisse être joué entre deux ordinateurs
-* Si le temps nous le permet, créer un ultimate tic tac toe
+* Si le temps nous le permet, créer un Ultimate Tic Tac Toe
 
 ## Règles
 1) Joueur 1 choisit dans quelle grille et case il joue  
@@ -17,9 +17,7 @@
 grille appartient décide dans quel grille il faudra jouer.
 
 
-    Joueur 1 joue ici
-    Joueur 2 doit jouer dans ce tic tac toe
-    Joueur 1 doit jouer danc ce tic tac toe
+    Joueur 1 joue ici *insertion images*
 
 4) Ainsi de suite jusqu'à ce qu'une personne gagne le grand tic tac toe
 
