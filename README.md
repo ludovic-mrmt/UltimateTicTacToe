@@ -32,5 +32,5 @@ grille appartient décide dans quel grille il faudra jouer.
 || 15.11.2017  |22.11.2017   |  29.11.2017 | 6.11.2017  | 13.11.2017  |
 |---|---|---|---|---|---|
 | Ludovic  | Finir le *README* + Mettre en place *Vuetify*   |   |   |   |   |
-|  Kelan |  Finir le *README* + Comprendre *Firebase* |   |   |   |   |
+|  Kelan |  Finir le *README* + Comprendre *Firebase* | Mettre en place Firebase  | Lier le jeu avec la base de donnée  |   |   |
 |  Matteo |  Finir le *README* + Commencer la page d'acceuil |   |   |   |   | |
