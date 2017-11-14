@@ -33,4 +33,4 @@ grille appartient décide dans quel grille il faudra jouer.
 |---|---|---|---|---|---|
 | Ludovic  | Finir le *README* + Mettre en place *Vuetify*   |   |   |   |   |
 |  Kelan |  Finir le *README* + Comprendre *Firebase* |   |   |   |   |
-|  Matteo |  Finir le *README* + Commencer la page d'acceuil |mettre en place un bouton reliant la page d'acceuil à la page du morpion   |   |   |   | |
+|  Matteo |  Finir le *README* + Commencer la page d'acceuil |mettre en place un bouton reliant la page d'acceuil à la page du morpion et un bouton envoyant sur une description des règles  |commencer à rédiger la page des règles   |   |   | |
