@@ -33,4 +33,4 @@ grille appartient décide dans quel grille il faudra jouer.
 |---|---|---|---|---|---|
 | Ludovic  | Finir le *README* + Mettre en place *Vuetify*   | Continuer la mise en place de *Vuetify*   |  Amélioration du site |   |   |
 |  Kelan |  Finir le *README* + Comprendre *Firebase* | Mettre en place *Firebase*  | Lier le jeu avec la base de donnée  |   |   |
-|  Matteo |  Finir le *README* + Commencer la page d'acceuil |  Finir la page d'acceuil  | Faire une page de statistiques  |   |   | |
+|  Matteo |  Finir le *README* + Commencer la page d'acceuil |    |   |   |   | |
