@@ -16,7 +16,7 @@
 3) Si un joueur est envoyé sur une grille gagnée, le joueur a qui la
 grille appartient décide dans quel grille il faudra jouer.
 
->Joueur 1 joue ici *insertion images*
+>Joueur 1 joue ici \*insertion images\*
 
 4) Ainsi de suite jusqu'à ce qu'une personne gagne le grand tic tac toe
 
