@@ -1,23 +1,48 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <v-app>
+  <v-toolbar dark color="primary">
+     <v-toolbar-side-icon>
+    </v-toolbar-side-icon>
+     <v-toolbar-title class="white--text">Ultimate TicTacToe</v-toolbar-title>
+     <v-spacer></v-spacer>
+   </v-toolbar>
+
+
+
+  <v-container fluid="fluid" class="text-xs-center">
+     <v-layout row wrap>
+
+         <v-card height="20000px" flat color="white">
+           <v-card-text>
+             <div>
+               <v-btn color="blue">Jouer une partie
+               <v-icon right>
+              gamepad
+              </v-icon>
+               </v-btn>
+             </div>
+             <div>
+               <v-btn color="yellow">Règles du jeu
+               <v-icon right >
+              help
+              </v-icon>
+              </v-btn>
+             </div>
+
+           </v-card-text>
+         </v-card>
+       </v-flex>
+    </v-layout>
+  </v-container>
+  </v-app>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
-</script>
+  export default {
+    data () {
+      return {
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+      }
+    }
+  }
+</script>
