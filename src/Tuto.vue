@@ -12,11 +12,11 @@
   <v-container fluid="fluid" class="text-xs-center">
      <v-layout row wrap>
 
-         <v-card  height="200px" flat color="blue">
+         <v-card class="text-md-center" height="200px" flat color="blue">
            <v-card-text>
 
              <div>
-               <v-btn href="TicTacToe.vue" color="blue">Jouer une partie
+               <v-btn color="blue">Jouer une partie
                <v-icon right>
               gamepad
               </v-icon>
