@@ -16,13 +16,13 @@
            <v-card-text>
 
              <div>
-               <v-btn color="blue">Jouer une partie de TicTAcToe normal
+               <v-btn color="blue">Jouer une partie de TicTacToe normal
                <v-icon right>
               gamepad
               </v-icon>
                </v-btn>
              </div>
-             <v-btn color="red">Jouer une partie de TicTAcToe normal
+             <v-btn color="red">Jouer une partie de TicTacToe ultime
              <v-icon right>
             gamepad
             </v-icon>
