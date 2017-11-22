@@ -16,12 +16,19 @@
            <v-card-text>
 
              <div>
-               <v-btn href="TicTacToe.vue" color="blue">Jouer une partie
+               <v-btn color="blue">Jouer une partie de TicTAcToe normal
                <v-icon right>
               gamepad
               </v-icon>
                </v-btn>
              </div>
+             <v-btn color="red">Jouer une partie de TicTAcToe normal
+             <v-icon right>
+            gamepad
+            </v-icon>
+             </v-btn>
+           </div>
+
              <div>
                <v-btn color="yellow">Règles du jeu
                <v-icon right >
