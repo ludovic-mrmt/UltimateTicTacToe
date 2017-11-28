@@ -12,15 +12,23 @@
   <v-container fluid="fluid" class="text-xs-center">
      <v-layout row wrap>
 
-         <v-card height="20000px" flat color="white">
+         <v-card  height="200px" flat color="blue">
            <v-card-text>
+
              <div>
-               <v-btn color="blue">Jouer une partie
+               <v-btn color="blue">Jouer une partie de TicTacToe normal
                <v-icon right>
               gamepad
               </v-icon>
                </v-btn>
              </div>
+             <v-btn color="red">Jouer une partie de TicTacToe ultime
+             <v-icon right>
+            gamepad
+            </v-icon>
+             </v-btn>
+           </div>
+
              <div>
                <v-btn color="yellow">Règles du jeu
                <v-icon right >
