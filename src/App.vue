@@ -12,7 +12,9 @@
     </v-navigation-drawer>
     <v-toolbar dark class="blue-grey darken-1">
       <v-toolbar-side-icon @click.native.stop="sideNav = !sideNav"></v-toolbar-side-icon>
-      <v-toolbar-title>UltimateTicTacToe</v-toolbar-title>
+      <v-toolbar-title>
+        <router-link to="/" tag="span" style="cursor: pointer">UltimateTicTacToe</router-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
          <v-btn flat color="amber darken-3" dark>Le jeu
@@ -35,9 +37,9 @@
       return {
         sideNav: false,
         menuItems: [
-          { icon: 'supervisor_account', title: 'View'},
-          { icon: 'room', title: 'Test'},
-          { icon: 'person', title: 'hey'}
+          { icon: 'supervisor_account', title: 'Home', link: '/'},
+          { icon: 'list', title: 'Morpion', link: '/morpion'},
+          { icon: 'person', title: 'Stats', link: '/stats'}
         ]
       }
     }
