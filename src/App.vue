@@ -5,14 +5,18 @@
     </v-toolbar-side-icon>
      <v-toolbar-title class="white--text">Ultimate TicTacToe</v-toolbar-title>
      <v-spacer></v-spacer>
+     <main>
+     <router-view>
+     </router-view>
+     </main>
    </v-toolbar>
 
 
 
   <v-container fluid="fluid" class="text-xs-center">
      <v-layout row wrap>
-
-         <v-card  height="200px" flat color="blue">
+     <v-flex md12 sm6>
+         <v-card  height="725px" flat color="green">
            <v-card-text>
 
              <div>
@@ -22,6 +26,7 @@
               </v-icon>
                </v-btn>
              </div>
+
              <v-btn color="red">Jouer une partie de TicTacToe ultime
              <v-icon right>
             gamepad
@@ -42,7 +47,9 @@
        </v-flex>
     </v-layout>
   </v-container>
+
   </v-app>
+
 </template>
 
 <script>
