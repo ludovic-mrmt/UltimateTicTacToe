@@ -1,5 +1,5 @@
 <template>
   <div class="hello">
-    <p>The home page</p>
+    <h1 style="text-align:center;">Bienvenue sur la page de l'UltimateTicTacToe !</h1>
   </div>
 </template>
