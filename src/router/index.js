@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '../components/Home'
 import Morpion from '../components/Morpion'
 import Stats from '../components/Stats'
+import Regles from '../components/Regles'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/stats',
       name: 'Stats',
       component: Stats
+    },
+    {
+      path: '/regles',
+      name: 'Regles',
+      component: Regles
     }
   ],
   mode: 'history'
