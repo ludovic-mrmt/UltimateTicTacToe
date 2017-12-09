@@ -6,12 +6,12 @@
         </v-card-media>
         <v-card-title primary-title>
           <div>
-            <h1 style="text-align:center;">Bienvenue sur la page de l'UltimateTicTacToe !</h1>
+            <h2 style="text-align:center;">Bienvenue sur la page de l'UltimateTicTacToe !</h2>
           </div>
         </v-card-title>
       </v-card>
-      <v-flex xs12 class="info">
-        <v-btn large router to="/morpion" class="text-center">Jouer !</v-btn>
+      <v-flex xs6  class="text-xs-center text-sm-center">
+        <v-btn large router to="/morpion">Jouer !</v-btn>
       </v-flex>
     </v-layout>
   </v-container>
