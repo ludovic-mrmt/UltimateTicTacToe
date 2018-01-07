@@ -27,7 +27,6 @@
   export default {
     data: function() {
       return {
-        color: 'white'
       }
     },
     methods: {
@@ -149,20 +148,14 @@
 
 #Jeu
 {
-     width: 600px;
-     height: 620px;
-     background-color: black;
-     overflow: auto;
-     margin: auto;
-     padding: 10px;
+  background-color: black;
+  overflow: auto;
+  padding: 10px;
 
 }
 
 #Jeu div
 {
-     width: 500px;
-     margin: auto;
-     clear: both;
 }
 
 .button
