@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="text-xs-center">
     <v-alert color="info" icon="info" value="true"  id="al">
     <v-btn color="error" v-on:click="main()">Appuyez ici pour commencer !</v-btn>
    </v-alert>
