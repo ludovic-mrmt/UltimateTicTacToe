@@ -32,10 +32,7 @@
     methods: {
 
       main () {
-        var carre = document.querySelectorAll(".button");
-        var joueurs = ['X', 'O']
-        var tour = 0;
-        var end = false;
+
 
         function estValide(button) {
           return button.innerHTML.length == 0;
@@ -109,7 +106,10 @@
             }
           return true;
         }
-
+        var carre = document.querySelectorAll(".button");
+        var joueurs = ['X', 'O']
+        var tour = 0;
+        var end = false;
         for (var i = 0; i < carre.length; i++) {
           carre[i].addEventListener("click", function() {
             if (end)
@@ -123,14 +123,14 @@
 
               if(end)
                 {
-                  document.getElementById("al").innerHTML = "Le joueur " + joueurs[tour] + " a gagné ! ";
-                  return;
+                  alert("Le joueur " + joueurs[tour] + " a gagné ! ");
+                  return window.location.reload();
                 }
 
               if (matchNul(carre))
                 {
-                  document.getElementById("al").innerHTML = "Match Nul !";
-                  return;
+                  alert("Match Nul !");
+                  return window.location.reload();
                 }
 
               tour++;
