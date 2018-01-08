@@ -14,11 +14,8 @@ export default new Router({
      path: '/rules',
      name: 'Rules',
      component: rules
-    }
-
-  ],
-  mode: "history"
-
+    },
+{
       path: '/',
       name: 'Home',
       component: Home
