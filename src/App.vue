@@ -42,10 +42,10 @@ function XorO() {
         sideNav: false,
         menuItems: [
           { icon: 'supervisor_account', title: 'Home', link: '/'},
-          { icon: 'assignment', title: 'Règles', link: '/regles'},
-          { icon: 'list', title: 'Morpion', link: '/morpion'},
+          { icon: 'list', title: 'Règles', link: '/regles'},
+          { icon: 'golf_course', title: 'Morpion', link: '/morpion'},
           { icon: 'person', title: 'Stats', link: '/stats'},
-          { icon: 'form', title: 'Signup', link: '/signup'}
+          { icon: 'assignment', title: 'Signup', link: '/signup'}
         ]
       }
     }
