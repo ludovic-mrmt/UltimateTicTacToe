@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <v-alert color="info" icon="info" value="true" v-on:click="main()" id="al">
-     Appuyez ici pour commencer !
+    <v-alert color="info" icon="info" value="true"  id="al">
+    <v-btn color="error" v-on:click="main()">Appuyez ici pour commencer !</v-btn>
    </v-alert>
     <div id="Jeu">
       <div>
