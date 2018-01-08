@@ -109,6 +109,7 @@
         var joueurs = ['X', 'O']
         var tour = 0;
         var end = false;
+        document.getElementById("al").innerHTML = joueurs[tour] + " commence !";
         for (var i = 0; i < carre.length; i++) {
           carre[i].addEventListener("click", function() {
             if (end)

@@ -14,6 +14,21 @@
         :rules="emailRules"
         required
       ></v-text-field>
+      <v-text-field
+        label="Password"
+        v-model="password"
+        :counter="10"
+        required
+      ></v-text-field>
+      <v-text-field
+        label="Confirm Password"
+        v-model="confirmPassword"
+        :rules="[comparePasswords]"
+        :counter="10"
+
+        required
+
+      ></v-text-field>
       <v-btn
         @click="submit"
         :disabled="!valid"
@@ -38,8 +53,26 @@
         emailRules: [
           (v) => !!v || 'E-mail is required',
           (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+        ],
+        Password: '',
+        passwordRules: [
+          (v) => !!v || 'Password is required',
+          (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Password must be valid '
+        ],
+        confirmPassword: '',
+        CPasswordRules: [
+          (v) => !!v || 'Password is required',
+          (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Password must be valid '
         ]
+
+
       }
+    },
+    computed: {
+      comparePasswords() {
+      return this.password == this.confirmPassword ? 'Mot de passe incorect' : ''
+      }
+
     },
     methods: {
       submit () {
