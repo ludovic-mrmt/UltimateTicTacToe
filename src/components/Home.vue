@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
-<div>
-<p>The Home Page</p>
-</div>
-=======
+
   <v-container>
     <v-layout row justify-center wrap>
       <v-card>
@@ -20,5 +16,4 @@
       </v-flex>
     </v-layout>
   </v-container>
->>>>>>> 3a602c2ce3e8be904f0acec17617f07b3191f1d4
 </template>
