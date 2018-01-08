@@ -109,7 +109,11 @@
         var joueurs = ['X', 'O']
         var tour = 0;
         var end = false;
+<<<<<<< HEAD
         document.getElementById("al").innerHTML = "Joueur " + joueurs[tour] + " c'est à vous !";
+=======
+        document.getElementById("al").innerHTML = joueurs[tour] + " commence !";
+>>>>>>> 3a602c2ce3e8be904f0acec17617f07b3191f1d4
         for (var i = 0; i < carre.length; i++) {
           carre[i].addEventListener("click", function() {
             if (end)
