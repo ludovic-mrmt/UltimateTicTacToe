@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="signup">
     <v-form v-model="valid">
       <v-text-field
         label="Name"
@@ -14,6 +14,12 @@
         :rules="emailRules"
         required
       ></v-text-field>
+      <v-btn
+        @click="submit"
+        :disabled="!valid"
+      >
+        submit
+      </v-btn>
     </v-form>
   </div>
 </template>
@@ -34,6 +40,23 @@
           (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
         ]
       }
+    },
+    methods: {
+      submit () {
+        if (this.$refs.form.validate()) {
+          // Native form submission is not yet supported
+          axios.post('/api/submit', {
+            name: this.name,
+            email: this.email
+          })
+        }
+      }
     }
   }
 </script>
+
+<style>
+  .signup {
+    margin: auto;
+  }
+</style>
