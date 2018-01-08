@@ -9,7 +9,13 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+<<<<<<< HEAD
     "vue": "^2.5.9",
+=======
+    "firebase": "^4.8.1",
+    "vue": "^2.5.3",
+    "vue-router": "^3.0.1",
+>>>>>>> 3a602c2ce3e8be904f0acec17617f07b3191f1d4
     "vuetify": "^0.16.9"
   },
   "devDependencies": {
