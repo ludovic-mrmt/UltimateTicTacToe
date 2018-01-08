@@ -33,7 +33,6 @@
 
       main () {
 
-
         function estValide(button) {
           return button.innerHTML.length == 0;
         }
