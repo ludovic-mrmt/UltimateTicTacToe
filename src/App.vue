@@ -24,7 +24,7 @@
       </v-toolbar-items>
     </v-toolbar>
     <main>
-
+      <router-view></router-view>
     </main>
     <v-container fluid="fluid" class="text-xs-center">
       <v-layout row wrap>
