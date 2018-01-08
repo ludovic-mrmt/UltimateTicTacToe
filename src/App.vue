@@ -81,7 +81,6 @@
   </v-app>
 
 
->>>>>>> 3a602c2ce3e8be904f0acec17617f07b3191f1d4
 </template>
 
 <script>
@@ -92,7 +91,7 @@ function XorO() {
   export default {
     data () {
       return {
-<<<<<<< HEAD
+
 
 =======
         sideNav: false,
@@ -103,7 +102,7 @@ function XorO() {
           { icon: 'person', title: 'Stats', link: '/stats'},
           { icon: 'assignment', title: 'Signup', link: '/signup'}
         ]
->>>>>>> 3a602c2ce3e8be904f0acec17617f07b3191f1d4
+
       }
     }
   }
