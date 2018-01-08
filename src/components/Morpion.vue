@@ -1,8 +1,8 @@
 <template>
-  <div class="text-xs-center">
-    <v-alert color="info" icon="info" value="true"  id="al">
-    <v-btn color="error" v-on:click="main()">Appuyez ici pour commencer !</v-btn>
-   </v-alert>
+  <div class="morpion">
+    <v-alert color="info" value="true" id="al">
+    <v-btn color="error" v-on:click="main()" id="btn">Appuyez ici pour commencer !</v-btn>
+    </v-alert>
     <div id="Jeu">
       <div>
         <button class="button"></button>
@@ -109,6 +109,7 @@
         var joueurs = ['X', 'O']
         var tour = 0;
         var end = false;
+        document.getElementById("al").innerHTML = "Joueur " + joueurs[tour] + " c'est à vous !";
         for (var i = 0; i < carre.length; i++) {
           carre[i].addEventListener("click", function() {
             if (end)
@@ -157,6 +158,10 @@
 {
 }
 
+#al {
+  margin: auto;
+}
+
 .button
 {
    width: 150px;
@@ -168,6 +173,9 @@
    color:#ffffff;
    border: 3px solid white;
    border-radius: 10px 10px 10px 10px;
+}
+.morpion {
+  margin: auto;
 }
 
 </style>
