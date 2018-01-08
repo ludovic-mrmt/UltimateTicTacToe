@@ -26,19 +26,6 @@
     <main>
       <router-view></router-view>
     </main>
-    <v-container fluid="fluid" class="text-xs-center">
-      <v-layout row wrap>
-        <v-flex xs2 sm2><span></span>
-          <v-card height="20cm" flat color="white">
-            <v-card-text>
-                <v-btn color="primary" id=1 v-on:click= "XorO()"></v-btn>
-                <v-btn color="primary" id=2></v-btn>
-                <v-btn color="primary" id=3></v-btn>
-            </v-card-text>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-container>
   </v-app>
 
 
