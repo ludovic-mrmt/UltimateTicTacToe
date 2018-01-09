@@ -63,7 +63,7 @@ function XorO() {
         }
         return menuItems
       },
-      useIsAuthenticated () {
+      userIsAuthenticated () {
         return this.$store.getters.user !== null && this.$store.getters.user !== undefined
 s
       }

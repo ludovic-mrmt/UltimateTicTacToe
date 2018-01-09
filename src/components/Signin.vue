@@ -5,7 +5,7 @@
         <v-card>
           <v-card-text>
             <v-container>
-              <form @submit.prevent="onSignup">
+              <form @submit.prevent="onSignin">
                 <v-layout row>
                   <v-flex>
                     <v-text-field
@@ -30,17 +30,6 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-text-field
-                      name="confirmPassword"
-                      label="Confirmer le mot de passe"
-                      id="confirmPassword"
-                      v-model="confirmPassword"
-                      type="password"
-                      :rules="[comparePasswords]"></v-text-field>
-                  </v-flex>
-                </v-layout>
-                <v-layout row>
-                  <v-flex xs12>
                     <v-btn type="submit">Envoyer</v-btn>
                   </v-flex>
                 </v-layout>
@@ -59,13 +48,10 @@
       return {
         email: '',
         password: '',
-        confirmPassword: ''
+
       }
     },
     computed: {
-      comparePasswords () {
-        return this.password !== this.confirmPassword ? 'Passwords do not match' : true
-      },
       user () {
         return this.$store.getters.user
       }
@@ -78,8 +64,8 @@
       }
     },
     methods: {
-      onSignup () {
-        this.$store.dispatch('signUserUp', {email: this.email, password: this.password})
+      onSignin () {
+        this.$store.dispatch('signUserIn', {email: this.email, password: this.password})
       }
     }
   }
