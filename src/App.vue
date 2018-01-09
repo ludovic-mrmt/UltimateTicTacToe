@@ -52,9 +52,6 @@ function XorO() {
           { icon: 'face', title: 'Signup', link: '/signup'},
           { icon: 'assignment', title: 'Signin', link: '/signin'}
         ]
-<<<<<<< HEAD
-
-=======
         if (this.userIsAuthenticated) {
           menuItems =
             [
@@ -68,7 +65,7 @@ function XorO() {
       },
       useIsAuthenticated () {
         return this.$store.getters.user !== null && this.$store.getters.user !== undefined
->>>>>>> master
+s
       }
     }
   }

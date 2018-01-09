@@ -38,15 +38,12 @@ export default new Router({
       path: '/signup',
       name: 'Signup',
       component: Signup
-<<<<<<< HEAD
-
-=======
     },
     {
       path: '/signin',
       name: 'Signin',
       component: Signin
->>>>>>> master
+
     }
   ],
   mode: 'history'
