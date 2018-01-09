@@ -2,16 +2,18 @@
   <div class="morpion">
     <v-alert color="info" value="true" id="al">
     </v-alert>
-    <v-form>
+    <v-form v-model="valid">
       <v-text-field
         label="Pseudo"
         v-model="name"
-        required
+        :rules="nameRules"
       ></v-text-field>
+      <p hidden id="btn">{{ name }}</p>
       <v-btn
       v-on:click="main()"
+      :disabled="!valid"
       >
-      submit
+      Envoyer
       </v-btn>
     </v-form>
     <div id="Jeu">
@@ -35,128 +37,156 @@
 </template>
 
 <script>
+import * as firebase from 'firebase'
+
   export default {
     data: function() {
       return {
-        name: ''
+        valid: true,
+        name: '',
+        nameRules : [
+          (v) => !!v || 'Entrez un pseudo'
+        ]
       }
     },
-    watch: {
-      user (value) {
-        if (value == null || value == undefined) {
-          console.log("Ateention");
-        }
+    computed: {
+      user () {
+        return this.$store.getters.user
       }
     },
     methods: {
 
       main () {
+        var ref = firebase.database().ref('name');
+        ref.on('value', gotData, errData);
+        function gotData(data) {
+          var inPseudo = document.getElementById("btn").innerHTML;
+          var scores = data.val();
+          var keys = Object.keys(scores);
+          for (var i = 0; i < keys.length; i++) {
+            var k = keys[i];
+            var name = scores[k].name;
+            var email = scores[k].email;
+            if (name==inPseudo) {
+              i=keys.length;
 
-        function estValide(button) {
-          return button.innerHTML.length == 0;
-        }
+              function estValide(button) {
+                return button.innerHTML.length == 0;
+              }
 
-        function setSymbol(btn, symbole) {
-          btn.innerHTML = symbole;
-        }
+              function setSymbol(btn, symbole) {
+                btn.innerHTML = symbole;
+              }
 
-        function rechercherVainqueur(carre, joueurs, tour){
-          if (carre[0].innerHTML == joueurs[tour] && carre[1].innerHTML == joueurs[tour] && carre[2].innerHTML == joueurs[tour]) {
-            carre[0].style.backgroundColor = "#9ACD32";
-            carre[1].style.backgroundColor = "#9ACD32";
-            carre[2].style.backgroundColor = "#9ACD32";
-            return true;
-          }
+              function rechercherVainqueur(carre, joueurs, tour){
+                if (carre[0].innerHTML == joueurs[tour] && carre[1].innerHTML == joueurs[tour] && carre[2].innerHTML == joueurs[tour]) {
+                  carre[0].style.backgroundColor = "#9ACD32";
+                  carre[1].style.backgroundColor = "#9ACD32";
+                  carre[2].style.backgroundColor = "#9ACD32";
+                  return true;
+                }
 
-          if (carre[3].innerHTML == joueurs[tour] && carre[4].innerHTML == joueurs[tour] && carre[5].innerHTML == joueurs[tour]) {
-            carre[3].style.backgroundColor = "#9ACD32";
-            carre[4].style.backgroundColor = "#9ACD32";
-            carre[5].style.backgroundColor = "#9ACD32";
-            return true;
-          }
+                if (carre[3].innerHTML == joueurs[tour] && carre[4].innerHTML == joueurs[tour] && carre[5].innerHTML == joueurs[tour]) {
+                  carre[3].style.backgroundColor = "#9ACD32";
+                  carre[4].style.backgroundColor = "#9ACD32";
+                  carre[5].style.backgroundColor = "#9ACD32";
+                  return true;
+                }
 
-          if (carre[6].innerHTML == joueurs[tour] && carre[7].innerHTML == joueurs[tour] && carre[8].innerHTML == joueurs[tour]) {
-            carre[6].style.backgroundColor = "#9ACD32";
-            carre[7].style.backgroundColor = "#9ACD32";
-            carre[8].style.backgroundColor = "#9ACD32";
-            return true;
-          }
+                if (carre[6].innerHTML == joueurs[tour] && carre[7].innerHTML == joueurs[tour] && carre[8].innerHTML == joueurs[tour]) {
+                  carre[6].style.backgroundColor = "#9ACD32";
+                  carre[7].style.backgroundColor = "#9ACD32";
+                  carre[8].style.backgroundColor = "#9ACD32";
+                  return true;
+                }
 
-          if (carre[0].innerHTML == joueurs[tour] && carre[3].innerHTML == joueurs[tour] && carre[6].innerHTML == joueurs[tour]) {
-            carre[0].style.backgroundColor = "#9ACD32";
-            carre[3].style.backgroundColor = "#9ACD32";
-            carre[6].style.backgroundColor = "#9ACD32";
-            return true;
-          }
+                if (carre[0].innerHTML == joueurs[tour] && carre[3].innerHTML == joueurs[tour] && carre[6].innerHTML == joueurs[tour]) {
+                  carre[0].style.backgroundColor = "#9ACD32";
+                  carre[3].style.backgroundColor = "#9ACD32";
+                  carre[6].style.backgroundColor = "#9ACD32";
+                  return true;
+                }
 
-          if (carre[1].innerHTML == joueurs[tour] && carre[4].innerHTML == joueurs[tour] && carre[7].innerHTML == joueurs[tour]) {
-            carre[1].style.backgroundColor = "#9ACD32";
-            carre[4].style.backgroundColor = "#9ACD32";
-            carre[7].style.backgroundColor = "#9ACD32";
-            return true;
-          }
+                if (carre[1].innerHTML == joueurs[tour] && carre[4].innerHTML == joueurs[tour] && carre[7].innerHTML == joueurs[tour]) {
+                  carre[1].style.backgroundColor = "#9ACD32";
+                  carre[4].style.backgroundColor = "#9ACD32";
+                  carre[7].style.backgroundColor = "#9ACD32";
+                  return true;
+                }
 
-          if (carre[2].innerHTML == joueurs[tour] && carre[5].innerHTML == joueurs[tour] && carre[8].innerHTML == joueurs[tour]) {
-            carre[2].style.backgroundColor = "#9ACD32";
-            carre[5].style.backgroundColor = "#9ACD32";
-            carre[8].style.backgroundColor = "#9ACD32";
-            return true;
-          }
+                if (carre[2].innerHTML == joueurs[tour] && carre[5].innerHTML == joueurs[tour] && carre[8].innerHTML == joueurs[tour]) {
+                  carre[2].style.backgroundColor = "#9ACD32";
+                  carre[5].style.backgroundColor = "#9ACD32";
+                  carre[8].style.backgroundColor = "#9ACD32";
+                  return true;
+                }
 
-          if (carre[0].innerHTML == joueurs[tour] && carre[4].innerHTML == joueurs[tour] && carre[8].innerHTML == joueurs[tour]) {
-            carre[0].style.backgroundColor = "#9ACD32";
-            carre[4].style.backgroundColor = "#9ACD32";
-            carre[8].style.backgroundColor = "#9ACD32";
-            return true;
-          }
+                if (carre[0].innerHTML == joueurs[tour] && carre[4].innerHTML == joueurs[tour] && carre[8].innerHTML == joueurs[tour]) {
+                  carre[0].style.backgroundColor = "#9ACD32";
+                  carre[4].style.backgroundColor = "#9ACD32";
+                  carre[8].style.backgroundColor = "#9ACD32";
+                  return true;
+                }
 
-          if (carre[2].innerHTML == joueurs[tour] && carre[4].innerHTML == joueurs[tour] && carre[6].innerHTML == joueurs[tour]) {
-            carre[2].style.backgroundColor = "#9ACD32";
-            carre[4].style.backgroundColor = "#9ACD32";
-            carre[6].style.backgroundColor = "#9ACD32";
-            return true;
-          }
-        }
-        function matchNul(pions) {
-          for (var i = 0, len = pions.length; i < len; i++) {
-            if (pions[i].innerHTML.length == 0)
-              return false;
-            }
-          return true;
-        }
-        var carre = document.querySelectorAll(".button");
-        var joueurs = ['X', 'O']
-        var tour = 0;
-        var end = false;
-        document.getElementById("al").innerHTML = "Joueur " + joueurs[tour] + " c'est à vous !";
-        for (var i = 0; i < carre.length; i++) {
-          carre[i].addEventListener("click", function() {
-            if (end)
-              return;
-            if (!estValide(this)) {
-              document.getElementById("al").innerHTML = "Case occupée ! " + joueurs[tour] + " c'est toujours à vous !";
+                if (carre[2].innerHTML == joueurs[tour] && carre[4].innerHTML == joueurs[tour] && carre[6].innerHTML == joueurs[tour]) {
+                  carre[2].style.backgroundColor = "#9ACD32";
+                  carre[4].style.backgroundColor = "#9ACD32";
+                  carre[6].style.backgroundColor = "#9ACD32";
+                  return true;
+                }
+              }
+              function matchNul(pions) {
+                for (var i = 0, len = pions.length; i < len; i++) {
+                  if (pions[i].innerHTML.length == 0)
+                    return false;
+                  }
+                return true;
+              }
+              var carre = document.querySelectorAll(".button");
+              var joueurs = ['X', 'O']
+              var player = [ 'X', inPseudo ]
+              var tour = 0;
+              var end = false;
+              document.getElementById("al").innerHTML = "Joueur " + player[tour] + " c'est à vous !";
+              for (var i = 0; i < carre.length; i++) {
+                carre[i].addEventListener("click", function() {
+                  if (end)
+                    return;
+                  if (!estValide(this)) {
+                    document.getElementById("al").innerHTML = "Case occupée ! " + player[tour] + " c'est toujours à vous !";
+                  }
+                  else {
+                    setSymbol(this, joueurs[tour]);
+                    end = rechercherVainqueur(carre, joueurs, tour);
+
+                    if(end)
+                      {
+                        alert("Le joueur " + player[tour] + " a gagné ! ");
+                        return window.location.reload();
+                      }
+
+                    if (matchNul(carre))
+                      {
+                        alert("Match Nul !");
+                        return window.location.reload();
+                      }
+
+                    tour++;
+                    tour = tour % 2;
+                    document.getElementById("al").innerHTML = "Joueur " + player[tour] + " c'est à vous !";
+                  }
+                });
+              }
             }
             else {
-              setSymbol(this, joueurs[tour]);
-              end = rechercherVainqueur(carre, joueurs, tour);
-
-              if(end)
-                {
-                  alert("Le joueur " + joueurs[tour] + " a gagné ! ");
-                  return window.location.reload();
-                }
-
-              if (matchNul(carre))
-                {
-                  alert("Match Nul !");
-                  return window.location.reload();
-                }
-
-              tour++;
-              tour = tour % 2;
-              document.getElementById("al").innerHTML = "Joueur " + joueurs[tour] + " c'est à vous !";
+              alert("Joueur introuvable, Recommencez");
+              return
             }
-          });
+          }
+        }
+        function errData(err) {
+          console.log('Error');
+          console.log(err);
         }
       }
     }

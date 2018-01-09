@@ -76,7 +76,7 @@
         email: '',
         name: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
       }
     },
     computed: {
@@ -97,7 +97,7 @@
     methods: {
       onSignup () {
         this.$store.dispatch('signUserUp', {email: this.email, password: this.password})
-        this.$store.dispatch('pseudoUp', {name: this.name})
+        this.$store.dispatch('pseudoUp', {name: this.name, email: this.email})
       }
     }
   }
