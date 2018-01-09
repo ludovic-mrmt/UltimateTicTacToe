@@ -5,6 +5,7 @@ import Morpion from '../components/Morpion'
 import Stats from '../components/Stats'
 import Regles from '../components/Regles'
 import Signup from '../components/Signup'
+import Signin from '../components/Signin'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/signup',
       name: 'Signup',
       component: Signup
+    },
+    {
+      path: '/signin',
+      name: 'Signin',
+      component: Signin
     }
   ],
   mode: 'history'

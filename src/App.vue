@@ -40,13 +40,28 @@ function XorO() {
     data () {
       return {
         sideNav: false,
-        menuItems: [
-          { icon: 'supervisor_account', title: 'Home', link: '/'},
-          { icon: 'list', title: 'Règles', link: '/regles'},
-          { icon: 'golf_course', title: 'Morpion', link: '/morpion'},
-          { icon: 'person', title: 'Stats', link: '/stats'},
-          { icon: 'assignment', title: 'Signup', link: '/signup'}
+      }
+    },
+    computed: {
+      menuItems () {
+        let menuItems = [
+
+          { icon: 'face', title: 'Signup', link: '/signup'},
+          { icon: 'assignment', title: 'Signin', link: '/signin'}
         ]
+        if (this.userIsAuthenticated) {
+          menuItems =
+            [
+              { icon: 'supervisor_account', title: 'Home', link: '/'},
+              { icon: 'list', title: 'Règles', link: '/regles'},
+              { icon: 'golf_course', title: 'Morpion', link: '/morpion'},
+              { icon: 'person', title: 'Stats', link: '/stats'}
+            ]
+        }
+        return menuItems
+      },
+      useIsAuthenticated () {
+        return this.$store.getters.user !== null && this.$store.getters.user !== undefined
       }
     }
   }
