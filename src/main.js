@@ -4,13 +4,14 @@ import * as firebase from 'firebase'
 import Vuetify from 'vuetify'
 import './stylus/main.styl'
 import router from './router'
-
+import { store } from './store'
 
 Vue.use(Vuetify)
 
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App),
   created () {
     firebase.initializeApp({

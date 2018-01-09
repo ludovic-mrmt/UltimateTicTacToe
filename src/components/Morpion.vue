@@ -29,6 +29,13 @@
       return {
       }
     },
+    watch: {
+      user (value) {
+        if (value == null || value == undefined) {
+          console.log("Ateention");
+        }
+      }
+    },
     methods: {
 
       main () {

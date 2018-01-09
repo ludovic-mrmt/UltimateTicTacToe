@@ -1,95 +1,86 @@
 <template>
-  <div class="signup">
-    <v-form v-model="valid">
-      <v-text-field
-        label="Name"
-        v-model="name"
-        :rules="nameRules"
-        :counter="10"
-        required
-      ></v-text-field>
-      <v-text-field
-        label="E-mail"
-        v-model="email"
-        :rules="emailRules"
-        required
-      ></v-text-field>
-      <v-text-field
-        label="Password"
-        v-model="password"
-        :counter="10"
-        required
-      ></v-text-field>
-      <v-text-field
-        label="Confirm Password"
-        v-model="confirmPassword"
-        :rules="[comparePasswords]"
-        :counter="10"
-
-        required
-
-      ></v-text-field>
-      <v-btn
-        @click="submit"
-        :disabled="!valid"
-      >
-        submit
-      </v-btn>
-    </v-form>
-  </div>
+  <v-container>
+    <v-layout row>
+      <v-flex>
+        <v-card>
+          <v-card-text>
+            <v-container>
+              <form @submit.prevent="onSignup">
+                <v-layout row>
+                  <v-flex>
+                    <v-text-field
+                      name="email"
+                      label="Mail"
+                      id="email"
+                      v-model="email"
+                      type="email"
+                      required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                      name="password"
+                      label="Mot de passe"
+                      id="password"
+                      v-model="password"
+                      type="password"
+                      required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                      name="confirmPassword"
+                      label="Confirmer le mot de passe"
+                      id="confirmPassword"
+                      v-model="confirmPassword"
+                      type="password"
+                      :rules="[comparePasswords]"></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-btn type="submit">Envoyer</v-btn>
+                  </v-flex>
+                </v-layout>
+              </form>
+            </v-container>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        valid: false,
-        name: '',
-        nameRules: [
-          (v) => !!v || 'Name is required',
-          (v) => v.length <= 10 || 'Name must be less than 10 characters'
-        ],
         email: '',
-        emailRules: [
-          (v) => !!v || 'E-mail is required',
-          (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
-        ],
-        Password: '',
-        passwordRules: [
-          (v) => !!v || 'Password is required',
-          (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Password must be valid '
-        ],
-        confirmPassword: '',
-        CPasswordRules: [
-          (v) => !!v || 'Password is required',
-          (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Password must be valid '
-        ]
-
-
+        password: '',
+        confirmPassword: ''
       }
     },
     computed: {
-      comparePasswords() {
-      return this.password == this.confirmPassword ? 'Mot de passe incorect' : ''
+      comparePasswords () {
+        return this.password !== this.confirmPassword ? 'Passwords do not match' : true
+      },
+      user () {
+        return this.$store.getters.user
       }
-
+    },
+    watch: {
+      user (value) {
+        if (value !== null && value !== undefined) {
+          this.$router.push('/morpion')
+        }
+      }
     },
     methods: {
-      submit () {
-        if (this.$refs.form.validate()) {
-          // Native form submission is not yet supported
-          axios.post('/api/submit', {
-            name: this.name,
-            email: this.email
-          })
-        }
+      onSignup () {
+        this.$store.dispatch('signUserUp', {email: this.email, password: this.password})
       }
     }
   }
 </script>
-
-<style>
-  .signup {
-    margin: auto;
-  }
-</style>
