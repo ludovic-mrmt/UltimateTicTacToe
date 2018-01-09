@@ -30,4 +30,4 @@ grille appartient décide dans quel grille il faudra jouer.
 |---|---|---|---|---|---|
 | Ludovic  | Finir le *README* + Mettre en place *Vuetify*   | Continuer la mise en place de *Vuetify*   |  Amélioration du site | Commencer à rédiger le code pour le morpion  | Continuer le script du morpion + mise en palce du login + tableau des scores + Amélioration globale|
 |  Kelan |  Finir le *README* + Comprendre *Firebase* | Mettre en place *Firebase*  | Lier le jeu avec la base de donnée  | Amélioration du login | Amélioration globale |
-|  Matteo |  Finir le *README* + Commencer la page d'acceuil |Mettre en place un bouton reliant la page d'acceuil à la page du morpion et un bouton envoyant sur une description des règles  |Rédiger la page des règles   | Amélioration globale   | PowerPoint + Mise à jour du READ.ME  |
+|  Matteo |  Finir le *README* + Commencer la page d'acceuil |Mettre en place un bouton reliant la page d'acceuil à la page du morpion et un bouton envoyant sur une description des règles  |Rédiger la page des règles   | Amélioration du login   | PowerPoint + Mise à jour du READ.ME  |
