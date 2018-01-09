@@ -1,8 +1,19 @@
 <template>
   <div class="morpion">
     <v-alert color="info" value="true" id="al">
-    <v-btn color="error" v-on:click="main()" id="btn">Appuyez ici pour commencer !</v-btn>
     </v-alert>
+    <v-form>
+      <v-text-field
+        label="Pseudo"
+        v-model="name"
+        required
+      ></v-text-field>
+      <v-btn
+      v-on:click="main()"
+      >
+      submit
+      </v-btn>
+    </v-form>
     <div id="Jeu">
       <div>
         <button class="button"></button>
@@ -27,6 +38,7 @@
   export default {
     data: function() {
       return {
+        name: ''
       }
     },
     watch: {
