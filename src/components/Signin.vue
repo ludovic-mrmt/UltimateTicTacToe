@@ -44,11 +44,6 @@
                     <v-btn type="submit">Envoyer</v-btn>
                   </v-flex>
                 </v-layout>
-                <v-layout row>
-                  <v-flex xs12>
-                    <v-btn router to="/signin">J'ai déjà un compte</v-btn>
-                  </v-flex>
-                </v-layout>
               </form>
             </v-container>
           </v-card-text>
