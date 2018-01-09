@@ -48,6 +48,15 @@ export const store = new Vuex.Store({
             console.log(error)
           }
         )
+    },
+    pseudoUp ({commit}, payload) {
+      firebase.database().ref('name').push(payload.name)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
     }
   },
   getters: {

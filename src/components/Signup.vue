@@ -18,6 +18,17 @@
                   </v-flex>
                 </v-layout>
                 <v-layout row>
+                  <v-flex>
+                    <v-text-field
+                      name="name"
+                      label="Pseudo"
+                      id="name"
+                      v-model="name"
+                      type="name"
+                      required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
                   <v-flex xs12>
                     <v-text-field
                       name="password"
@@ -63,6 +74,7 @@
     data () {
       return {
         email: '',
+        name: '',
         password: '',
         confirmPassword: ''
       }
@@ -85,6 +97,7 @@
     methods: {
       onSignup () {
         this.$store.dispatch('signUserUp', {email: this.email, password: this.password})
+        this.$store.dispatch('pseudoUp', {name: this.name})
       }
     }
   }
