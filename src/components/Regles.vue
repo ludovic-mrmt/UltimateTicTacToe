@@ -2,10 +2,19 @@
   <div class="hello">
     <template>
        <div class = "hello">
-       <img src= "../assets/Uttt3_1.png"  height="600" align="center">
-       <H1>    ...</H1>
-       <img src= "../assets/Uttt3_2.png"  height="600" align="left">
+       <img class="img" src= "../assets/rules1.png">
+       <img class="img" src= "../assets/rules2.png">
+       <img class="img" src= "../assets/rules3.png">
+       <img class="img" src= "../assets/rules4.png">
        </div>
     </template>
   </div>
 </template>
+
+<style>
+  .img {
+    margin: auto;
+    height: 300px;
+    align: center;
+  }
+</style>
