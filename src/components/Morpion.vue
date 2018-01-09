@@ -4,7 +4,7 @@
     </v-alert>
     <v-form v-model="valid">
       <v-text-field
-        label="Pseudo"
+        label="Pseudo d'un joueur adverse"
         v-model="name"
         :rules="nameRules"
       ></v-text-field>
@@ -45,7 +45,7 @@ import * as firebase from 'firebase'
         valid: true,
         name: '',
         nameRules : [
-          (v) => !!v || 'Entrez un pseudo'
+          (v) => !!v || 'Entrez un pseudo '
         ]
       }
     },
@@ -162,13 +162,13 @@ import * as firebase from 'firebase'
                     if(end)
                       {
                         alert("Le joueur " + player[tour] + " a gagné ! ");
-                        return window.location.reload();
+                        return window.location.href = "http://localhost:8080/";
                       }
 
                     if (matchNul(carre))
                       {
                         alert("Match Nul !");
-                        return window.location.reload();
+                        return window.location.href = "http://localhost:8080/";
                       }
 
                     tour++;
