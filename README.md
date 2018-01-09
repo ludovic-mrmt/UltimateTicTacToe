@@ -26,8 +26,8 @@ grille appartient décide dans quel grille il faudra jouer.
 > * Esthétique du site & page d'accueil : **Matteo**
 > * Fonctionnement de VueJs & page du morpion : **Ludovic**
 
-|| 15.11.2017  |22.11.2017   |  29.11.2017 | 6.11.2017  | 13.11.2017  |
+|| 15.11.2017  |22.11.2017   |  29.11.2017 | 6.12.2017  | Période d'examen + Vacances | 
 |---|---|---|---|---|---|
-| Ludovic  | Finir le *README* + Mettre en place *Vuetify*   | Continuer la mise en place de *Vuetify*   |  Amélioration du site |   |   |
-|  Kelan |  Finir le *README* + Comprendre *Firebase* | Mettre en place *Firebase*  | Lier le jeu avec la base de donnée  |   |   |
-|  Matteo |  Finir le *README* + Commencer la page d'acceuil |Mettre en place un bouton reliant la page d'acceuil à la page du morpion et un bouton envoyant sur une description des règles  |Commencer à rédiger la page des règles   |   |   | |
+| Ludovic  | Finir le *README* + Mettre en place *Vuetify*   | Continuer la mise en place de *Vuetify*   |  Amélioration du site | Commencer à rédiger le code pour le morpion  | Continuer le script du morpion + mise en palce du login + tableau des scores + Amélioration globale|
+|  Kelan |  Finir le *README* + Comprendre *Firebase* | Mettre en place *Firebase*  | Lier le jeu avec la base de donnée  | Amélioration du login | Amélioration globale |
+|  Matteo |  Finir le *README* + Commencer la page d'acceuil |Mettre en place un bouton reliant la page d'acceuil à la page du morpion et un bouton envoyant sur une description des règles  |Rédiger la page des règles   | Amélioration du login   | PowerPoint + Mise à jour du READ.ME  |
