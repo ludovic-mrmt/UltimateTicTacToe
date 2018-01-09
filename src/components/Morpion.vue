@@ -145,7 +145,6 @@ import * as firebase from 'firebase'
               var carre = document.querySelectorAll(".button");
               var joueurs = ['X', 'O']
               var player = [ 'X', inPseudo ]
-              console.log(user);
               var tour = 0;
               var end = false;
               document.getElementById("al").innerHTML = "Joueur " + player[tour] + " c'est à vous !";
