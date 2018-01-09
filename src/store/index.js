@@ -6,7 +6,9 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    user: null
+    user: null,
+    pseudo: null,
+    email: null
   },
   mutations: {
      setUser (state, payload) {
@@ -20,7 +22,6 @@ export const store = new Vuex.Store({
           user => {
             const newUser = {
               id: user.uid,
-              registeredMeetups: []
             }
             commit('setUser', newUser)
           }
@@ -38,7 +39,6 @@ export const store = new Vuex.Store({
           user => {
             const newUser = {
               id: user.uid,
-              registeredMeetups: []
             }
             commit('setUser', newUser)
           }
@@ -50,14 +50,19 @@ export const store = new Vuex.Store({
         )
     },
     pseudoUp ({commit}, payload) {
-      firebase.database().ref('name').push(payload.name)
+      var data = {
+        name: payload.name,
+        email: payload.email
+      }
+      firebase.database().ref('name').push(data)
       .then((data) => {
         console.log(data);
       })
       .catch((error) => {
         console.log(error);
       })
-    }
+    },
+
   },
   getters: {
     user (state) {
