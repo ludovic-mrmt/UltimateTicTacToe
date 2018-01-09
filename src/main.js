@@ -13,12 +13,9 @@ Vue.use(Vuetify)
 new Vue({
   el: '#app',
   router,
-<<<<<<< HEAD
 
-
-=======
   store,
->>>>>>> master
+
   render: h => h(App),
   created () {
     firebase.initializeApp({
