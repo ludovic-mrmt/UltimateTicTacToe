@@ -11,7 +11,7 @@
         </v-card-title>
       </v-card>
       <v-flex xs6  class="text-xs-center text-sm-center">
-        <v-btn large router to="/signup">Jouer !</v-btn>
+        <v-btn large router to="/Signup">Jouer !</v-btn>
       </v-flex>
     </v-layout>
   </v-container>

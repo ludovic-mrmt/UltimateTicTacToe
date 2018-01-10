@@ -4,7 +4,7 @@
     </v-alert>
     <v-form>
       <v-text-field
-        label="Pseudo"
+        label="Pseudo du joueur adverse"
         v-model="name"
         required
       ></v-text-field>
@@ -32,6 +32,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -143,13 +144,13 @@
               if(end)
                 {
                   alert("Le joueur " + joueurs[tour] + " a gagné ! ");
-                  return window.location.reload();
+                  window.location.href = "http://localhost:8080";
                 }
 
               if (matchNul(carre))
                 {
                   alert("Match Nul !");
-                  return window.location.reload();
+                  window.location.href = "http://localhost:8080";
                 }
 
               tour++;
@@ -161,6 +162,19 @@
       }
     }
   }
+</script>
+
+<script>
+
+var database = firebase.database();
+  var ref = database.ref('scores');
+  var data = {
+  name: "kelan",
+  score: 43
+  },
+ ref.push(data);
+  },
+
 </script>
 
 <style>
